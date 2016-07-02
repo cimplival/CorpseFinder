@@ -48,7 +48,7 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => __DIR__.'/../storage/corpsefinder.sqlite',
+            'database' => database_path('storage/corpsefinder.sqlite'),
             'prefix'   => '',
         ],
 
