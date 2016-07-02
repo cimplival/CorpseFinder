@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('__DIR__', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,7 +48,7 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => database_path('storage/corpsefinder.sqlite'),
+            'database' => database_path(__DIR__.'/../database/storage/corpsefinder.sqlite'),
             'prefix'   => '',
         ],
 
