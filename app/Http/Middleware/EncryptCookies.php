@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http\Middleware;
+namespace CorpseFinder\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

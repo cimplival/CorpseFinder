@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Jobs;
+namespace CorpseFinder\Jobs;
 
 use Illuminate\Bus\Queueable;
 

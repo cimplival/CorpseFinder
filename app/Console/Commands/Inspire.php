@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Console\Commands;
+namespace CorpseFinder\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

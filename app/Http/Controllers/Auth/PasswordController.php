@@ -1,8 +1,8 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers\Auth;
+namespace CorpseFinder\Http\Controllers\Auth;
 
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

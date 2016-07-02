@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TumshangilieBwana\Role;
-use TumshangilieBwana\User;
+use CorpseFinder\Role;
+use CorpseFinder\User;
 
 
 class UserSeeder extends Seeder

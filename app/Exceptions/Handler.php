@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Exceptions;
+namespace CorpseFinder\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -42,10 +42,26 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof ModelNotFoundException) {
-            $e = new NotFoundHttpException($e->getMessage(), $e);
+        switch($e){
+            case ($e instanceof ModelNotFoundException):
+               //return $this->renderException($e);
+               return view('layouts.main.page-not-found');
+            break;
+            default:
+            return parent::render($request, $e);
+        }
+    }
+
+    protected function renderException($e)
+    {
+
+        switch ($e){
+            case ($e instanceof ModelNotFoundException):
+               return view('layouts.main.page-not-found');
+            break;
+            default:
+               return view('layouts.main.page-not-found');
         }
 
-        return parent::render($request, $e);
     }
 }

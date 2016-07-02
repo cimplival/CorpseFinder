@@ -7,10 +7,10 @@
                     <div class="row">
                         <div class="description text-center col-lg-12">
                                 <a href="#">
-                                    <img src="assets/img/logo.png" alt="Church Logo">
+                                    
                                 </a><br><br>
-                                <h2>Tumshangilie Bwana</h2>
-                                Log in Below to add a Hymn<br>
+                                <h2>CorpseFinder</h2>
+                                Log in Below to add deceased.<br>
                                   @if (Session::has('info'))
                                   
                                       {{ Session::get('info') }}

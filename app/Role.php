@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana;
+namespace CorpseFinder;
 
 use Illuminate\Database\Eloquent\Model;
 

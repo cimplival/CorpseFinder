@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => TumshangilieBwana\User::class,
+        'model'  => CorpseFinder\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

@@ -5,27 +5,25 @@
             <div class= "container">
                 <div class="row">
                     <div class="description text-center col-lg-12">
-                        <a href="#">
-                            <img src="../assets/img/logo.png" alt="Church Logo">
+                        <a href="{{route('home')}}">
+                            <i fa fa-search></i>
                         </a><br><br>
-                        <h2>chymns</h2><br>
-                        <p>Largest Catholic Hymnal</p><br>
+                        <h2>CorpseFinder</h2><br>
+                        <p>Corpse Finder Information System</p><br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form>
+                        {!! Form::open(array('route' => 'search')) !!}
                             <div class="input-group add-on">
-                                
-                                <input class="form-control search-input" placeholder="Search Here..." type="text">
+                                <input class="form-control search-input" name="search" placeholder="Search Here..." type="text" required>
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="submit">
                                     <i class="glyphicon glyphicon-search"></i>
                                     </button>
                                 </span>
-                                
                             </div>
-                        </form>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>

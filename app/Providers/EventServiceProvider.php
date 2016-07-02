@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Providers;
+namespace CorpseFinder\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'TumshangilieBwana\Events\SomeEvent' => [
-            'TumshangilieBwana\Listeners\EventListener',
+        'CorpseFinder\Events\SomeEvent' => [
+            'CorpseFinder\Listeners\EventListener',
         ],
     ];
 

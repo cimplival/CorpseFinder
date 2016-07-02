@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => TumshangilieBwana\User::class,
+    'model' => CorpseFinder\User::class,
 
     /*
     |--------------------------------------------------------------------------

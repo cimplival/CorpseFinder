@@ -9,7 +9,7 @@
           <a href="#">
             <img src="assets/img/logo.png" alt="Church Logo">
           </a><br><br>
-          <h2>Tumshangilie Bwana</h2>
+          <h2>Corpsefinder</h2>
           <p>Register Below</p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 <?php 
 
-namespace TumshangilieBwana\Repositories;
+namespace CorpseFinder\Repositories;
 
-use TumshangilieBwana\Role;
-use TumshangilieBwana\User;
-use TumshangilieBwana\Password;
+use CorpseFinder\Role;
+use CorpseFinder\User;
+use CorpseFinder\Password;
 use Carbon\Carbon;
 
 class UserRepository {

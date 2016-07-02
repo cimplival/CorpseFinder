@@ -1,5 +1,5 @@
 <?php
-namespace TumshangilieBwana\Http\Middleware;
+namespace CorpseFinder\Http\Middleware;
 
 use Closure;
 class RoleMiddleware
@@ -14,8 +14,7 @@ class RoleMiddleware
     public function handle($request, Closure $next, $role)
     {
         if (! $request->user()->hasRole($role)) {
-            $request->session()->flash('status', 'Sorry, you don\'t have Access.');
-            return redirect('/');
+            return view('layouts.main.page-not-found');
         }
         return $next($request);
     }

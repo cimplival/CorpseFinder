@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http\Requests;
+namespace CorpseFinder\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

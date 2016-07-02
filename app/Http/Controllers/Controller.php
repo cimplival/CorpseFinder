@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers;
+namespace CorpseFinder\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

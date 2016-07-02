@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Repositories;
+namespace CorpseFinder\Repositories;
 
 use Illuminate\Support\Facades\DB;
 

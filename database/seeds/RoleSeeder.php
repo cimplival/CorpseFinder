@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TumshangilieBwana\Role;
+use CorpseFinder\Role;
 
 class RoleSeeder extends Seeder
 {

@@ -19,9 +19,7 @@
            <div class="section section-gray">
             	<div class="container text-center">
             		<p>
-            			Shout joyfully to the LORD, all the earth; 
-            			Break forth and sing for joy and sing praises.<br>
-            			- Psalms 98:4 
+            			"Though lovers be lost, love shall not; And death shall have no dominion."<br> Dylan Thomas.
             		</p>
             	</div>
             </div>

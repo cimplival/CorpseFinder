@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Console;
+namespace CorpseFinder\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

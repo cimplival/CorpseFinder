@@ -1,8 +1,8 @@
 <?php
 
-namespace TumshangilieBwana;
-use TumshangilieBwana\Role;
-use TumshangilieBwana\User;
+namespace CorpseFinder;
+use CorpseFinder\Role;
+use CorpseFinder\User;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -42,7 +42,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function roles()
     {
-        return $this->belongsToMany('TumshangilieBwana\Role')->withTimestamps();
+        return $this->belongsToMany('CorpseFinder\Role')->withTimestamps();
     }
     public function hasRole($name)
     {

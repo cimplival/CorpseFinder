@@ -1,9 +1,9 @@
 <?php
-namespace TumshangilieBwana\Http\Controllers;
-use TumshangilieBwana\Hymn;
+namespace CorpseFinder\Http\Controllers;
+use CorpseFinder\Deceased;
 use Illuminate\Http\Request;
-use TumshangilieBwana\Http\Requests;
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Requests;
+use CorpseFinder\Http\Controllers\Controller;
 class CategoryController extends Controller
 {
 /*

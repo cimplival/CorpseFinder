@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http;
+namespace CorpseFinder\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,11 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \TumshangilieBwana\Http\Middleware\EncryptCookies::class,
+        \CorpseFinder\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \TumshangilieBwana\Http\Middleware\VerifyCsrfToken::class,
+        \CorpseFinder\Http\Middleware\VerifyCsrfToken::class,
     ];
 
     /**
@@ -26,9 +26,9 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \TumshangilieBwana\Http\Middleware\Authenticate::class,
+        'auth' => \CorpseFinder\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \TumshangilieBwana\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \CorpseFinder\Http\Middleware\RedirectIfAuthenticated::class,
         'role' => Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => Zizaco\Entrust\Middleware\EntrustAbility::class,

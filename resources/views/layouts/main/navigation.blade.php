@@ -17,15 +17,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('categories') }}">
+                            <a href="{{ route('all-hymns') }}">
                                 <i class=""></i>
-                                Categories
+                                Archives
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('log-in')}}">
                                 <i class="fa fa-plus"></i>
-                                Add Hymn
+                                Add
                             </a>
                         </li>
                     </ul>

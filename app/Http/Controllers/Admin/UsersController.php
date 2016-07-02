@@ -1,13 +1,13 @@
 <?php
-namespace TumshangilieBwana\Http\Controllers\Admin;
+namespace CorpseFinder\Http\Controllers\Admin;
 
-use TumshangilieBwana\Http\Controllers\Controller;
-use TumshangilieBwana\Http\Requests;
-use TumshangilieBwana\Http\Requests\Request;
-use TumshangilieBwana\Http\Requests\UserRequest;
-use TumshangilieBwana\Http\Requests\UserUpdateRequest;
-use TumshangilieBwana\Role;
-use TumshangilieBwana\User;
+use CorpseFinder\Http\Controllers\Controller;
+use CorpseFinder\Http\Requests;
+use CorpseFinder\Http\Requests\Request;
+use CorpseFinder\Http\Requests\UserRequest;
+use CorpseFinder\Http\Requests\UserUpdateRequest;
+use CorpseFinder\Role;
+use CorpseFinder\User;
 use Auth;
 
 class UsersController extends Controller

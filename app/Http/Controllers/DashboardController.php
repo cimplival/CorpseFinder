@@ -1,11 +1,11 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers;
+namespace CorpseFinder\Http\Controllers;
 
-use TumshangilieBwana\User;
-use TumshangilieBwana\Hymn;
+use CorpseFinder\User;
+use CorpseFinder\Deceased;
 use Validator;
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Session;

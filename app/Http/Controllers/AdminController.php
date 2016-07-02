@@ -1,11 +1,11 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers;
+namespace CorpseFinder\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use TumshangilieBwana\Http\Requests;
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Requests;
+use CorpseFinder\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {

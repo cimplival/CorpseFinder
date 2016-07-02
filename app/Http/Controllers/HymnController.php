@@ -1,25 +1,27 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers;
+namespace CorpseFinder\Http\Controllers;
 
 use Auth;
 use Mail;
-use TumshangilieBwana\Hymn;
+use CorpseFinder\Deceased;
 use Validator;
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
-use TumshangilieBwana\Http\Requests;
+use CorpseFinder\Http\Requests;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
 use Illuminate\Session;
+use Input;
 
 class HymnController extends Controller
 {
     
-    public function __construct(Hymn $hymn)
+    public function __construct(Deceased $deceased)
     {
-        $this->hymn = $hymn;
+        $this->deceased = $deceased;
     }
 
     //GET HOME PAGE
@@ -29,17 +31,17 @@ class HymnController extends Controller
     }
 
     //GET CATEGORIES
-    public function getCategories()
+    public function getArchives()
     {
         return view('layouts.main.categories');
     }
 
     //GET All HYMNS
-    public function getAllHymns()
+    public function getAllDeceased()
     {   
-        $hymns = Hymn::all();
-        $hymn_title   = 'All Hymns';  
-        $data = compact('hymn_title','hymns'); 
+        $deceased = Deceased::all();
+        $title   = 'All Deceased';  
+        $data = compact('deceased','title'); 
 
         return view('layouts.main.all-hymns', $data);
     }
@@ -53,10 +55,21 @@ class HymnController extends Controller
     //GET SINGLE HYMN PAGE
     public function showHymn($slug)
     {
-        $hymn  = Hymn::findBySlug($slug);
-        $verses = $hymn->lyrics;
+        $deceased       = Deceased::findBySlug($slug);
+        if(Deceased::findBySlug($slug)){
+          $number         = $deceased->number;
+        $fullname       = $deceased->full_name;
+        $gender         = $deceased->gender;
+        $description    = $deceased->description;
+        $checkin_date   = $deceased->checkin_date;
+        $photo_path     = $deceased->photo_path;  
+        return view('layouts.main.hymns', compact('number', 'checkin_date','deceased','fullname','description','gender','photo_path'));
+        } else {
+            return view('layouts.main.page-not-found');
+        }
+        
 
-        return view('layouts.main.hymns', compact('verses','hymn'));
+        
     }
     
     //GET ADD HYMN PAGE
@@ -69,20 +82,44 @@ class HymnController extends Controller
     public function postSubmitHymn(Request $request)
     {
         $this->validate($request, [
-                'title'        => 'required|max:100',
-                'author'       => 'required|max:100',
-                'lyrics'       => 'required|max:5000',
-                'category'     => 'required|max:100'
+                'id_no'           => 'required|max:100',
+                'gender'          => 'required',
+                'date_of_arrival' => 'max:20',
+                'photo'           => 'required',
+                'description'     => 'max:1000'
             ]);
 
-        Hymn::create([
-                'title'         => $request->input('title'),
-                'author'        => $request->input('author'),
-                'category'      => $request->input('category'),
-                'lyrics'        => nl2br($request->input('lyrics'))
-            ]);
+        //Get Current User
+        $user                     = Auth::user()->fullname;
+        //$input = Input::all();
+       /* $input = Input::all();
+        $file = array_get($input,'photo');
+        $destinationPath = 'uploads';
+        $extension = $file->getClientOriginalExtension();
+        $fileName = rand(11111, 99999) . '.' . $extension;
+        $upload_success = $file->move($destinationPath, $fileName);
+*/
+        //Photo Upload
+        //$photo                  = $request->file('photo');
+        $file                     = $request->file('photo');
+        $photo_id                 = $request->input('id_no');
+        $destinationPath          = 'uploads';
+        $extension                = $file->getClientOriginalExtension();
+        $fileName                 = $photo_id . '.' . $extension;
+        $upload_success           = $file->move($destinationPath, $fileName);
 
-        return redirect()->route('add-hymn')->with('info', 'Your hymn has been submitted. Please await for its approval.');
+        Deceased::create([
+                'number'          => $request->input('id_no'),
+                'full_name'       => 'Unknown',
+                'gender'          => $request->input('gender'),
+                'description'     => nl2br($request->input('description')),
+                'checkin_date'    => $request->input('checkin_date'),
+                'author'          => $request->input($user),
+                'identified'      => '0',
+                /*'slug'          => $photo_id,*/
+                'photo_path'      => $destinationPath.'/'.$fileName,
+            ]);
+        return redirect()->route('add-hymn')->with('info', 'The deceased details have been submitted successfully.');
     }
 
 }

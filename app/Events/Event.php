@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Events;
+namespace CorpseFinder\Events;
 
 abstract class Event
 {

@@ -144,14 +144,15 @@ return [
         Orchestra\Parser\XmlServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
-        TumshangilieBwana\Providers\AppServiceProvider::class,
-        TumshangilieBwana\Providers\AuthServiceProvider::class,
-        TumshangilieBwana\Providers\EventServiceProvider::class,
-        TumshangilieBwana\Providers\RouteServiceProvider::class,
+        CorpseFinder\Providers\AppServiceProvider::class,
+        CorpseFinder\Providers\AuthServiceProvider::class,
+        CorpseFinder\Providers\EventServiceProvider::class,
+        CorpseFinder\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -204,7 +205,8 @@ return [
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Form'      => Illuminate\Html\FormFacade::class, 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
     ],
 
 ];

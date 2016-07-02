@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http\Middleware;
+namespace CorpseFinder\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
@@ -35,9 +35,10 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next)
     {
         if ($this->auth->check()) {
-            return redirect('/dashboard');
+            return redirect('/add-deceased#all');
         }
 
         return $next($request);
     }
+    
 }

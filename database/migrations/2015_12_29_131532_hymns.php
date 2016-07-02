@@ -13,14 +13,17 @@ class Hymns extends Migration
     
     public function up()
     {
-        Schema::create('hymns', function (Blueprint $table) {
+        Schema::create('deceased', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->index();
-            $table->text('category')->index();
-            $table->text('lyrics')->index();
-            $table->string('slug')->nullable();
+            $table->string('number')->index();
+            $table->string('full_name')->index();
+            $table->string('gender')->index();
+            $table->text('description')->index();
+            $table->string('checkin_date');
             $table->string('author')->nullable();
-            $table->boolean('approved')->default('0');   
+            $table->string('slug')->nullable();
+            $table->boolean('identified')->default('0');
+            $table->string('photo_path');
             $table->timestamps();
         });
     }
@@ -33,6 +36,6 @@ class Hymns extends Migration
     
     public function down()
     {
-        Schema::drop('hymns');
+        Schema::drop('deceased');
     }
 }

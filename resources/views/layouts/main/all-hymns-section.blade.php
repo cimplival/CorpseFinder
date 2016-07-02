@@ -1,4 +1,4 @@
-<div class="section section-white" id="hymn">
+<div class="section section-white" id="all">
                 <div class="container">
                     <h4 class="header-text text-center">Categories</h4>
                     <div class="row">
@@ -7,13 +7,13 @@
                                 <div class="text">
                                     <p>
                                         <h4 class="text-center">
-                                            {{$hymn_title}}
+                                            {{$title}}
                                         </h4>
                                     	<ol class="b">
-                                            @foreach($hymns as $hymn)
-                                    		<a href="{{ $hymn->slug }}#hymn">
+                                            @foreach($deceased as $deceased)
+                                    		<a href="{{ $deceased->slug }}#all">
                                                 <li class="category">
-                                                    {{ $hymn->title }}
+                                                    {{ $deceased->checkin_date }}, {{ $deceased->full_name }}, {{ $deceased->full_name }}, {{ $deceased->number }}
                                                 </li>
                                             </a>
                                             @endforeach
@@ -29,9 +29,7 @@
            <div class="section section-gray">
             	<div class="container text-center">
             		<p>
-            			Shout joyfully to the LORD, all the earth; 
-            			Break forth and sing for joy and sing praises.<br>
-            			- Psalms 98:4 
+            			"Though lovers be lost, love shall not; And death shall have no dominion."<br> Dylan Thomas.
             		</p>
             	</div>
             </div>

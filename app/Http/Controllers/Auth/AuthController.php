@@ -1,18 +1,18 @@
 <?php
 
-namespace TumshangilieBwana\Http\Controllers\Auth;
+namespace CorpseFinder\Http\Controllers\Auth;
 
 use Auth;
-use TumshangilieBwana\User;
+use CorpseFinder\User;
 use Validator;
-use TumshangilieBwana\Http\Controllers\Controller;
+use CorpseFinder\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use TumshangilieBwana\Http\Requests;
+use CorpseFinder\Http\Requests;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Contracts\Auth\Guard;
-use TumshangilieBwana\Role;
-use TumshangilieBwana\Repositories\UserRepository;
+use CorpseFinder\Role;
+use CorpseFinder\Repositories\UserRepository;
 
 class AuthController extends Controller
 {

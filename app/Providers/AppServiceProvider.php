@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Providers;
+namespace CorpseFinder\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

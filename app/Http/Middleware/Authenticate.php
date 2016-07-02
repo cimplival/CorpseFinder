@@ -1,6 +1,6 @@
 <?php
 
-namespace TumshangilieBwana\Http\Middleware;
+namespace CorpseFinder\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
@@ -40,14 +40,14 @@ class Authenticate
         }
         if ($this->auth->guest()) {
             if ($request->ajax()) {
-                return response('Unauthorized.', 401);
+                return view('layouts.main.page-not-found');
             } else {
                 return redirect()->guest('/');
             }
         }
         if( $this->auth->guest() || !$this->auth->user()->hasRole($role))
         {
-            abort(403);
+            return view('layouts.main.page-not-found');
         }
         return $next($request);
     }
