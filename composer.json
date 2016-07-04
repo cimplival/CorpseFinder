@@ -13,7 +13,8 @@
         "leyo/africastalkinglaravelgateway": "^1.0",
         "zizaco/entrust": "dev-laravel-5",
         "laravelcollective/html": "~5.0",
-	"sqlite3": "*"
+	"sqlite3": "*",
+	"ext-pdo_sqlite": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
