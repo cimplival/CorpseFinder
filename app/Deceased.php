@@ -12,8 +12,8 @@ class Deceased extends Model implements SluggableInterface
 
     protected $table = 'deceased';
 
-    protected $fillable = ['id', 'number', 'full_name', 'description','gender', 'checkin_date', 
-    						'author', 'slug', 'identified', 'photo_path'];
+    protected $fillable = ['id', 'number', 'full_name', 'description', 'gender', 'checkin_date', 
+    						'author', 'slug', 'identified', 'search_deceased', 'photo_path'];
     						
     protected $sluggable = [
         'build_from' => 'number',

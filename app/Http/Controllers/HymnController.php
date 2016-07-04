@@ -91,16 +91,6 @@ class HymnController extends Controller
 
         //Get Current User
         $user                     = Auth::user()->fullname;
-        //$input = Input::all();
-       /* $input = Input::all();
-        $file = array_get($input,'photo');
-        $destinationPath = 'uploads';
-        $extension = $file->getClientOriginalExtension();
-        $fileName = rand(11111, 99999) . '.' . $extension;
-        $upload_success = $file->move($destinationPath, $fileName);
-*/
-        //Photo Upload
-        //$photo                  = $request->file('photo');
         $file                     = $request->file('photo');
         $photo_id                 = $request->input('id_no');
         $destinationPath          = 'uploads';
@@ -116,7 +106,7 @@ class HymnController extends Controller
                 'checkin_date'    => $request->input('checkin_date'),
                 'author'          => $request->input($user),
                 'identified'      => '0',
-                /*'slug'          => $photo_id,*/
+                'search_deceased' => $request->input('id_no'). ' Unknown '. $request->input('gender') . nl2br($request->input('description')) . $request->input('checkin_date'). $request->input($user) . $destinationPath.'/'.$fileName,
                 'photo_path'      => $destinationPath.'/'.$fileName,
             ]);
         return redirect()->route('add-hymn')->with('info', 'The deceased details have been submitted successfully.');

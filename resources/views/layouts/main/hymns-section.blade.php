@@ -13,7 +13,7 @@
                                     <p>
                                           {!! nl2br($description) !!}
                                     </p>
-                                    <p class="text-center">-----------------------------------------------------------------------------
+                                    <p class="text-center">-----------------------------------------------------------------------------<br>
                                           Below is a link to the deceased photo.<br>
                                           <i><strong>WARNING! The photo may be Disturbing.<br><a href="" target="_blank"><i><small>Our Terms and Conditions Apply</small></i></strong></i></a><br>
                                           <a href="{{$photo_path}}" target="_blank">Click here to view photo.</a>

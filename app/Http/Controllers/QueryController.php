@@ -13,8 +13,8 @@ class QueryController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('search');
-        $hymns = DB::table('songs')->where('search_lyrics', 'LIKE', '%' . $query . '%')->paginate(1000);
+        $deceased = DB::table('deceased')->where('search_deceased', 'LIKE', '%' . $query . '%')->paginate(1000);
             
-        return view('layouts.main.search-results', compact('hymns', 'query'));
+        return view('layouts.main.search-results', compact('deceased', 'query'));
      }
 }

@@ -23,6 +23,7 @@ class Hymns extends Migration
             $table->string('author')->nullable();
             $table->string('slug')->nullable();
             $table->boolean('identified')->default('0');
+            $table->text('search_deceased');
             $table->string('photo_path');
             $table->timestamps();
         });
