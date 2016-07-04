@@ -26,11 +26,11 @@ Route::post('search',                                       ['uses' => 'QueryCon
 
 Route::get('/',                                              ['uses' => 'HymnController@getHome',                       'as' => 'home']);
 Route::get('archives',                                       ['uses' => 'HymnController@getArchives']);
-Route::get('archives#all',                                   ['uses' => 'HymnController@getArchives',                 'as' => 'categories']);
+Route::get('archives',                                   ['uses' => 'HymnController@getArchives',                 'as' => 'categories']);
 Route::get('all-deceased',                                   ['uses' => 'HymnController@getAllDeceased']);
-Route::get('all-deceased#all',                                ['uses' => 'HymnController@getAllDeceased',                   'as' => 'all-hymns']);
+Route::get('all-deceased',                                ['uses' => 'HymnController@getAllDeceased',                   'as' => 'all-hymns']);
 Route::get('add-deceased', 										 ['uses' => 'HymnController@getAddHymn', 'middleware'=> 'auth:user']);
-Route::get('add-deceased#all', 							     ['uses' => 'HymnController@getAddHymn', 					'as' => 'add-hymn', 'middleware'=> 'auth:user']);
+Route::get('add-deceased', 							     ['uses' => 'HymnController@getAddHymn', 					'as' => 'add-hymn', 'middleware'=> 'auth:user']);
 Route::get('search-results',                                 ['uses' => 'HymnController@getSearchResults',              'as' => 'search-results']);
 Route::post('submit-deceased',                                   ['uses' => 'HymnController@postSubmitHymn',                'as' => 'submit-hymn']);
 
